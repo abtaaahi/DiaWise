@@ -14,6 +14,7 @@ from deep_translator import GoogleTranslator
 from lime.lime_text import LimeTextExplainer
 import re
 import warnings
+import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore")
 
 MODEL_DIR = "./medical_model_fast"
@@ -181,3 +182,23 @@ explainer = LimeTextExplainer(class_names=list(le.classes_))
 def explain_text(text, num_features=5):
     exp = explainer.explain_instance(text, predict_proba, num_features=num_features)
     return exp.as_list()
+
+def plot_metrics(metrics):
+    names = list(metrics.keys())
+    values = list(metrics.values())
+
+    plt.figure(figsize=(6, 4))
+    bars = plt.bar(names, values, color=["#4CAF50", "#2196F3", "#FFC107"])
+    plt.title("Model Performance Metrics", fontsize=14)
+    plt.ylabel("Score")
+    plt.ylim(0, 1)
+
+    for bar in bars:
+        yval = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2, yval + 0.02, f"{yval:.3f}", 
+                 ha="center", va="bottom", fontsize=10)
+
+    plt.tight_layout()
+    plt.show()
+
+plot_metrics(metrics)
