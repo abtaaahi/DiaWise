@@ -1,0 +1,196 @@
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python data_preview.py
+Sample Records:
+   id  ...         label
+0   1  ...  Dengue Fever
+1   2  ...  Dengue Fever
+2   3  ...  Dengue Fever
+3   4  ...  Dengue Fever
+4   5  ...  Dengue Fever
+5   6  ...  Dengue Fever
+6   7  ...  Dengue Fever
+7   8  ...  Dengue Fever
+8   9  ...  Dengue Fever
+9  10  ...  Dengue Fever
+
+[10 rows x 10 columns]
+
+Class Distribution:
+label
+Dengue Fever               614
+Malaria                    575
+Diabetic Ketoacidosis      570
+Jaundice                   559
+Diabetes Mellitus          556
+Meningitis                 556
+Anemia                     541
+Migraine                   535
+Hepatitis                  510
+Hepatitis B                501
+Schistosomiasis            495
+Food Poisoning             490
+Common Cold                485
+Influenza                  485
+Skin Allergy               471
+Heart Attack               463
+Dengue+Chik                458
+Tuberculosis               454
+Coronary Heart Disease     449
+Lupus                      436
+Hypertension               435
+Urinary Tract Infection    434
+Tonsillitis                424
+Gastroenteritis            422
+Chikungunya                412
+Typhoid Fever              398
+Chronic Kidney Disease     381
+Appendicitis               369
+Kidney Stones              364
+Asthma                     359
+Sinusitis                  357
+Bronchitis                 341
+Fungal Skin Infection      339
+Arthritis                  330
+Thyroid Disorders          329
+IBS                        326
+Depression                 326
+Pneumonia                  323
+COPD                       321
+Otitis Media               317
+Conjunctivitis             313
+Anxiety Disorder           311
+Gout                       294
+GERD                       258
+PCOS                       249
+Eczema                     244
+Stroke                     238
+Gallstones                 230
+Peptic Ulcer               224
+Name: count, dtype: int64
+
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python preprocessing_demo.py
+Before Cleaning: আমি শরীর ব্যথা এবং চরম মাথা ব্যথা ২ দিন থেকে অনুভব করছি।
+After Cleaning:
+
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python balancing_check.py
+Before Balancing:
+label
+Dengue Fever               614
+Malaria                    575
+Diabetic Ketoacidosis      570
+Jaundice                   559
+Diabetes Mellitus          556
+Meningitis                 556
+Anemia                     541
+Migraine                   535
+Hepatitis                  510
+Hepatitis B                501
+Schistosomiasis            495
+Food Poisoning             490
+Common Cold                485
+Influenza                  485
+Skin Allergy               471
+Heart Attack               463
+Dengue+Chik                458
+Tuberculosis               454
+Coronary Heart Disease     449
+Lupus                      436
+Hypertension               435
+Urinary Tract Infection    434
+Tonsillitis                424
+Gastroenteritis            422
+Chikungunya                412
+Typhoid Fever              398
+Chronic Kidney Disease     381
+Appendicitis               369
+Kidney Stones              364
+Asthma                     359
+Sinusitis                  357
+Bronchitis                 341
+Fungal Skin Infection      339
+Arthritis                  330
+Thyroid Disorders          329
+IBS                        326
+Depression                 326
+Pneumonia                  323
+COPD                       321
+Otitis Media               317
+Conjunctivitis             313
+Anxiety Disorder           311
+Gout                       294
+GERD                       258
+PCOS                       249
+Eczema                     244
+Stroke                     238
+Gallstones                 230
+Peptic Ulcer               224
+Name: count, dtype: int64
+
+After Balancing:
+label
+Schistosomiasis            224
+Meningitis                 224
+Diabetic Ketoacidosis      224
+Jaundice                   224
+Heart Attack               224
+Anxiety Disorder           224
+Skin Allergy               224
+Thyroid Disorders          224
+Arthritis                  224
+Common Cold                224
+Sinusitis                  224
+Bronchitis                 224
+Conjunctivitis             224
+Migraine                   224
+Depression                 224
+Eczema                     224
+Dengue Fever               224
+Hepatitis                  224
+Influenza                  224
+Stroke                     224
+Fungal Skin Infection      224
+Gastroenteritis            224
+Chronic Kidney Disease     224
+Peptic Ulcer               224
+Anemia                     224
+Chikungunya                224
+Gallstones                 224
+Gout                       224
+Kidney Stones              224
+Tonsillitis                224
+Dengue+Chik                224
+Food Poisoning             224
+Asthma                     224
+Coronary Heart Disease     224
+Pneumonia                  224
+PCOS                       224
+Otitis Media               224
+COPD                       224
+Typhoid Fever              224
+IBS                        224
+Malaria                    224
+Hepatitis B                224
+Tuberculosis               224
+Urinary Tract Infection    224
+Appendicitis               224
+Lupus                      224
+Diabetes Mellitus          224
+Hypertension               224
+GERD                       224
+Name: count, dtype: int64
+
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python embedding_info.py
+Embedding Size: 384
+Embedding Sample (first 10 dims): [-0.00067287  0.14606799 -0.19824418  0.39717996  0.2635428  -0.2916553
+  0.21956345  0.23389041  0.05439553 -0.35383424]
+
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python metrics_export.py
+Log Loss: 1.5135391514080498
+
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python lime_demo.py
+LIME explanation saved to outputs/lime_explanation.html
+
+E:\EDU\EDU 12th Semester\THESIS\Human-Ai Medical\DiaWise>python pipeline_demo.py
+Original Text: রোগীর জ্বর এবং মাথা ব্যথা
+Translated Text: Patient has fever and headache
+Predicted Disease: Typhoid Fever
+Confidence: 0.46059876369982033

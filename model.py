@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore")
 
 MODEL_DIR = "./medical_model_fast"
-DATA_PATH = "./synthetic_medical_dataset_50x500.csv"
+DATA_PATH = "./synthetic_data.csv"
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 
